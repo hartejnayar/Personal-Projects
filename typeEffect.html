@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <!--meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"-->
+  <title>Hacker Typer</title>
+  <style>
+
+  </style>
+</head>
+<body>
+  <button onclick="typewriter()">Click on me to see the hacking effect</button>
+  <p id="demo"></p>
+
+  <script>
+    var i = 0;
+    var txt = "hello" +  "br";
+    var speed = 50;
+
+    function typewriter(){
+      if(i < txt.length) {
+        document.getElementById("demo").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typewriter, speed);
+      }
+    }
+  </script>
+</body>
+</html>
